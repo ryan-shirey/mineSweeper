@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<script src="mineSweeperControl.js"></script>
+<script src="main.js"></script>
+<html lang="en">
+<head>
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+    <h1>Minesweeper </h1>
+    <button type="button" onclick="reveal()">Reveal</button>
+
+    <button type="button" onclick="startGame(10,10,25)">25 Mines</button>
+
+    <button type="button" onclick="startGame(15,15,40)">40 Mines</button>
+
+    <button type="button" onclick="startGame(18,18,99)">99 Mines</button>
+    <div class="mine-field" id="mineField" onclick="onClickDelegator(event)"></div>
+    <script>
+        const mineField = document.querySelector("#mineField");
+        const size = 100;
+        for (i = 0; i < 100; i++) {
+            const mine = document.createElement("div");
+            mine.setAttribute("class", "mine");
+            mine.setAttribute("id", String(i));
+            mineField.appendChild(mine);
+        }
+    </script>
+</body>
+
+</html>

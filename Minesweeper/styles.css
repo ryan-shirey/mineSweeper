@@ -1,0 +1,22 @@
+:root{
+    --mineSize: 25px;
+    --cols: 10;
+    --rows: 10;
+}
+
+.mine-field{
+    display: grid;
+    grid-template-columns: repeat(var(--cols),var(--mineSize));
+    grid_template_rows: repeat(var(--rows),var(--mineSize));
+    background-color:purple;
+    width: calc(var(--cols)*var(--mineSize));
+    height: calc(var(--cols)*var(--mineSize));
+}
+.mine{
+    background-color:aqua;
+    outline-width: 1px;
+    outline-style:solid;
+    width: var(--mineSize);
+    height: var(--mineSize);
+    text-align: center;
+}
