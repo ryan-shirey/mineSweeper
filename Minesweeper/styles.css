@@ -8,9 +8,9 @@
     display: grid;
     grid-template-columns: repeat(var(--cols),var(--mineSize));
     grid_template_rows: repeat(var(--rows),var(--mineSize));
-    background-color:purple;
-    width: calc(var(--cols)*var(--mineSize));
-    height: calc(var(--cols)*var(--mineSize));
+    width:auto;
+    height:auto;
+
 }
 .mine{
     background-color:aqua;
